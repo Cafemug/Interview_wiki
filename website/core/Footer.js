@@ -8,6 +8,15 @@
 const React = require('react');
 
 class Footer extends React.Component {
+  componentDidMount () {
+    const script = document.createElement("script");
+
+    script.src = "https://buttons.github.io/buttons.js";
+    script.async = true;
+    script.defer = true;
+
+    document.body.appendChild(script);
+  }
   docUrl(doc) {
     const baseUrl = this.props.config.baseUrl;
     const docsUrl = this.props.config.docsUrl;
@@ -60,39 +69,13 @@ class Footer extends React.Component {
             <h5>More</h5>
             {/* <a href={`${this.props.config.baseUrl}blog`}>Blog</a> */}
             <a href={`https://hyanghope.tistory.com/`}>Blog</a>
-            <a href="https://github.com/Cafemug">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
-            </a>
-            {this.props.config.twitterUsername && (
-              <div className="social">
-                <a
-                  href={`https://twitter.com/${this.props.config.twitterUsername}`}
-                  className="twitter-follow-button">
-                  Follow @{this.props.config.twitterUsername}
-                </a>
-              </div>
-            )}
-            {this.props.config.facebookAppId && (
-              <div className="social">
-                <div
-                  className="fb-like"
-                  data-href={this.props.config.url}
-                  data-colorscheme="dark"
-                  data-layout="standard"
-                  data-share="true"
-                  data-width="225"
-                  data-show-faces="false"
-                />
-              </div>
-            )}
+            <a href="https://github.com/Cafemug/Interview_wiki">GitHub</a>
+            <a 
+             className="github-button" 
+             href="https://github.com/cafemug/Interview_wiki" 
+             data-icon="octicon-star" 
+             aria-label="Star cafemug/Interview_wiki on GitHub">
+            Star</a>
           </div>
         </section>
 
