@@ -1,7 +1,7 @@
 {
   "docs": {
     "전공지식": ["operating-system", "network", "computer-architecture", "database", "data-structure"],
-    "알고리즘": ["doc5"],
-    "기술 면접 예상 질문": ["doc3"]
+    "알고리즘": ["algorithme"],
+    "기술 면접 예상 질문": ["interview"]
   }
 }

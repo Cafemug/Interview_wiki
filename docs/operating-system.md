@@ -1,7 +1,7 @@
 ---
-id: doc1
-title: Latin-ish
-sidebar_label: Example Page
+id: operating-system
+title: 운영체제
+sidebar_label: 운영체제
 ---
 
 Check the [documentation](https://docusaurus.io) for how to use Docusaurus.

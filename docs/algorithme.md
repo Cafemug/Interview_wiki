@@ -1,6 +1,7 @@
 ---
-id: doc2
-title: document number 2
+id: algorithme
+title: 알고리즘
+sidebar_label: 알고리즘
 ---
 
 This is a link to [another document.](doc3.md)  
