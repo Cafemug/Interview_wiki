@@ -4,26 +4,141 @@ title: 운영체제
 sidebar_label: 운영체제
 ---
 
-Check the [documentation](https://docusaurus.io) for how to use Docusaurus.
+## 운영체제 기술 면접 대답 요약 정리
 
-## Lorem
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.
-
-## Mauris In Code
+### 프로세스와 쓰레드
 
 ```
-Mauris vestibulum ullamcorper nibh, ut semper purus pulvinar ut. Donec volutpat orci sit amet mauris malesuada, non pulvinar augue aliquam. Vestibulum ultricies at urna ut suscipit. Morbi iaculis, erat at imperdiet semper, ipsum nulla sodales erat, eget tincidunt justo dui quis justo. Pellentesque dictum bibendum diam at aliquet. Sed pulvinar, dolor quis finibus ornare, eros odio facilisis erat, eu rhoncus nunc dui sed ex. Nunc gravida dui massa, sed ornare arcu tincidunt sit amet. Maecenas efficitur sapien neque, a laoreet libero feugiat ut.
+Q. 프로세스와 쓰레드의 차이는?
+
+A. 프로세스는 프로그램이 메모리 위에서 실행중인 작업이고
+
+쓰레드는 프로세스 안에서 실행되는 일련의 흐름 단위입니다
+```
+```
+Q. 멀티 프로세스와  멀티 쓰레드의 차이?
+
+A. 멀티 프로세스는 한 컴퓨터에 여러 CPU를 사용하여 여러 프로세스를 동시에 처리하는 방법
+
+멀티 쓰레드는 하나의 프로그램에서 여러 쓰레드를 사용하여 각 쓰레드가 하나의 작업을 처리하는 방법
 ```
 
-## Nulla
+```
+Q. 멀티 프로세스와  멀티 쓰레드의 각각 장단점?
 
-Nulla facilisi. Maecenas sodales nec purus eget posuere. Sed sapien quam, pretium a risus in, porttitor dapibus erat. Sed sit amet fringilla ipsum, eget iaculis augue. Integer sollicitudin tortor quis ultricies aliquam. Suspendisse fringilla nunc in tellus cursus, at placerat tellus scelerisque. Sed tempus elit a sollicitudin rhoncus. Nulla facilisi. Morbi nec dolor dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et aliquet lectus. Pellentesque sit amet eros nisi. Quisque ac sapien in sapien congue accumsan. Nullam in posuere ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin lacinia leo a nibh fringilla pharetra.
+A.
+멀티 프로세스
+ 장점: 각각 독립된 메모리를 가지고있어서 안정성이 뛰어나다
+ 단점: 각각 독립된 메모리를 가지고 있어서 context switching으로 인한 성능 저하
+멀티 쓰레드
+ 장점: 공유 메모리를 사용하기 때문에 시간, 공간 자원 손실이 감소
+ 단점: 모든 스레드가 메모리를 공유하기 때문에 하나의 쓰레드가 데이터 공간을 망가뜨리면 모든 쓰레드가 작동이 안되는 안정성 문제
+```
 
-## Orci
+```
+Q. 사용자 수준 쓰레드와  커널 수준 쓰레드의 각각 장단점?
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin venenatis lectus dui, vel ultrices ante bibendum hendrerit. Aenean egestas feugiat dui id hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in tellus laoreet, eleifend nunc id, viverra leo. Proin vulputate non dolor vel vulputate. Curabitur pretium lobortis felis, sit amet finibus lorem suscipit ut. Sed non mollis risus. Duis sagittis, mi in euismod tincidunt, nunc mauris vestibulum urna, at euismod est elit quis erat. Phasellus accumsan vitae neque eu placerat. In elementum arcu nec tellus imperdiet, eget maximus nulla sodales. Curabitur eu sapien eget nisl sodales fermentum.
+A.
+사용자 수준 쓰레드
+ 장점: context switch가 없어서 커널 쓰레드에 비해 오버헤드가 적습니다
+ 단점: 프로세스 내의 한 쓰레드가 커널로 진입하는 순간 나머지 쓰레드들이 다 정지됩니다.
+커널 수준 쓰레드
+ 장점: 멀티프로세서를 활용할 수 있기때문에 사용자 쓰레드 보다 효율적입니다
+ 단점: 커널 스케쥴러에 context switch가 발생하여 빈번할수록 성능이 하락합니다
+```
+### 세마포어와 뮤텍스
 
-## Phasellus
+```
+Q. 세마포어란?
 
-Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.
+A. 멀티프로그래밍 환경에서 공유 자원에 대한 접근을 제한하는 방법
+
+```
+
+```
+Q. 뮤텍스란?
+
+A. 임계 구역을 가진 쓰레드들의 단독으로 실행되게 하는 기술
+이진 세마포어라고도 부름(상태가 0,1)
+```
+
+```
+Q. Critical Section이란?
+
+A. 멀티 프로그래밍 환경에서 여러 프로세스가 데이터를 공유하면서 수행될 때 각
+프로세스에서 공유 데이터를 접근하는 프로그램 코드 부분
+```
+
+### 데드락
+
+```
+Q. 데드락 발생 조건?
+
+A. 
+1. 상호 배제(Mutual exclusion)
+자원은 한 번에 한 프로세스만이 사용할 수 있어야 합니다
+
+2. 점유 대기(hold and wait)
+최소한 하나의 자원을 점유하고 있으면서 다른 프로세스에 할당되어 사용하고 있는
+자원을 추가로 점유하기 위해 대기하는 프로세스가 존재하여야 합니다
+
+3. 비선점(No preemption)
+다른 프로세스에 할당된 자원은 사용이 끝날 때까지 강제로 빼앗을 수 없습니다
+
+4. 순환 대기(Cicular wait)
+순환의 형태로 프로세스가 자원을 대기하고 있어야합니다(꼬리물기형식)
+```
+
+```
+Q. 데드락 처리방법?
+
+A.
+1. 교착 상태 예방 및 회피
+ - 교착 상태가 되지 않도록 보장하기 위하여 교착 상태를 예방하거나 회피하는
+ 프로토콜을 이용하는 방법
+2. 교착 상태 탐지 및 회복
+ - 교착 상태가 되도록 허용 한 뒤에 회복하는 방법
+```
+
+```
+Q. 데드락 교착 상태 예방 및 회피?
+
+A.
+1. 예방
+ 4가지 교착 상태 발생 조건 중에 하나를 제거하여 해결하는 방법
+ - 상호 배제 제거: 여러 프로세스가 공유된 자원을 사용하는 방법
+ - 점유 대기 제거: 프로세스 실행 전 모든 자원을 할당하는 방법
+ - 비선점 제거: 다른 프로세스가 요구 할때 가진 자원을 반납하는 방법
+ - 순환대기 제거: 자원을 순서대로 요구하는 방법
+
+2. 회피
+ 은행원 알고리즘
+  - 프로세스가 자원을 요구할 때, 미리 다 체크하여 안전상태로 되는지 파악하고
+  교착상태 회피, 안정상태이면 할당하고 아니면 대기
+
+```
+```
+Q. 데드락 교착 상태 탐지 및 회복?
+
+A.
+1. 탐지
+ 자원 요청시 탐지 알고리즘을 통해 교착 상태를 탐지함
+
+2. 회복
+ 교착 상태를 유발한 프로세스를 종료하거나, 할당도니 자원을 해제시켜서 회복시킴
+```
+### 인터럽트
+
+```
+Q. 멀티 프로세스와  멀티 쓰레드의 각각 장단점?
+
+A.
+```
+
+### RISC와 CISC
+
+```
+Q. 멀티 프로세스와  멀티 쓰레드의 각각 장단점?
+
+A.
+```
