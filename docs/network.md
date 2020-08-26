@@ -4,5 +4,25 @@ title: 네트워크
 sidebar_label: 네트워크
 ---
 
-This is a link to [another document.](doc3.md)  
-This is a link to an [external page.](http://www.example.com)
+## 네트워크 기술 면접 대답 요약 정리
+
+
+### TCP & UDP
+
+```
+Q. 프로세스와 쓰레드의 차이는?
+
+A. 프로세스는 프로그램이 메모리 위에서 실행중인 작업이고
+
+쓰레드는 프로세스 안에서 실행되는 일련의 흐름 단위입니다
+```
+
+### HTTP & HTTPS
+
+```
+Q. 프로세스와 쓰레드의 차이는?
+
+A. 프로세스는 프로그램이 메모리 위에서 실행중인 작업이고
+
+쓰레드는 프로세스 안에서 실행되는 일련의 흐름 단위입니다
+```
