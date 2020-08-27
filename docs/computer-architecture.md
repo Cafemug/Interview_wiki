@@ -4,12 +4,36 @@ title: 컴퓨터 구조
 sidebar_label: 컴퓨터 구조
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## 컴퓨터 구조 기술 면접 대답 요약 정리
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+```
+Q. CPU란?
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+A.
+CPU는 연산장치, 제어장치, 레지스터 3가지로 구성됩니다
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+1. 연산장치
+산순논리연산장치이며 연산에 필요한 데이터를 레지스터에서 가져옵니다
+또 연산 결과를 다시 레지스터로 보냅니다
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+2. 제어장치
+레지스터 사이의 데이터 전송을 감지하고 연산장치의 동작을 지시하는 장치
+전체 컴퓨터 시스템의 작동을 통제하며 적절한 순서로 명령을 가져와서
+각 명령을 해석하여 각각의 장치로 신호를 보내는 장치입니다
+
+3. 레지스터
+한 비트를 저장 할 수있는 플립플롭의 모임으로, 중앙 처리 장치 내에 있는
+소규모 고속 기억 장치입니다
+```
+
+
+```
+Q. 캐시 메모리란?
+
+A. 
+주 기억 장치에 저장된 내용의 일부를 임시적으로 복사/저장하는 기억장치입니다
+CPU와 주 기억장치의 속도 차이로 인한 성능 저하를 방지하기 위한 방법입니다
+1. 주 기억 장치보다는 고속, 소량의 메모리입니다
+2. cpu와 인접한 곳에 있거나 내부에 있습니다
+
+```
