@@ -52,8 +52,8 @@ module.exports = {
               href: 'https://open.kakao.com/o/g99LzEgb',
             },
             {
-              label: 'Ainze',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Ainize',
+              href: 'https://ainize.ai/',
             },
           ],
         },
