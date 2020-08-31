@@ -21,4 +21,4 @@ RUN wc -c node_modules/@docusaurus/mdx-loader/src/index.js | grep 2214 -q && mv 
 # COPY --from=0 /app/my-website/build/ .
 
 CMD ["yarn", "start"]
-
+EXPOSE 3000
