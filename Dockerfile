@@ -1,8 +1,8 @@
 FROM node:lts
 
-WORKDIR /app/,my-website
+WORKDIR /app/my-website
 
-EXPOSE 3000 35729
+# EXPOSE 3000 35729
 COPY ./docs /app/docs
 COPY ./my-website /app/my-website
 RUN yarn install
@@ -16,6 +16,6 @@ RUN echo $(wc -c node_modules/@docusaurus/mdx-loader/src/index.js)
 RUN wc -c node_modules/@docusaurus/mdx-loader/src/index.js | grep 2214 -q && mv custom_node_modules/index.js node_modules/@docusaurus/mdx-loader/src/index.js || echo "\n\nUpdate custom_node_modules/index.js\n\n"
 
 
-CMD ["yarn", "start"]
+CMD ["yarn run start -- --port 80"]
 
-EXPOSE 3000
+EXPOSE 80
