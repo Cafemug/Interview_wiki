@@ -1,10 +1,10 @@
 FROM node:lts
 
-WORKDIR /app/website
+WORKDIR /app/,my-website
 
 EXPOSE 3000 35729
 COPY ./docs /app/docs
-COPY ./website /app/website
+COPY ./my-website /app/my-website
 RUN yarn install
 
 RUN echo $(wc -c node_modules/@docusaurus/mdx-loader/src/remark/rightToc/search.js)
@@ -17,3 +17,5 @@ RUN wc -c node_modules/@docusaurus/mdx-loader/src/index.js | grep 2214 -q && mv 
 
 
 CMD ["yarn", "start"]
+
+EXPOSE 3000
