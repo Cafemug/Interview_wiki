@@ -8,32 +8,29 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/different.svg',
+    title: '다 알고 있는 CS 지식을 답변하기 편하게 한줄 정리!!',
+    imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        기술 면접 한줄 요약 정리
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/interview.svg',
+    title: '기술 면접 예상 질문 모음',
+    imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+       기술 면접 예상 질문들을 통해 대비해 보세요!!
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Who is Using This?',
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        기술 면접 준비하는 모든 개발자 분들을 위한 사이트입니다
       </>
     ),
   },
@@ -59,7 +56,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
@@ -72,7 +69,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/')}>
-              Get Started
+              Wiki
             </Link>
           </div>
         </div>

@@ -12,8 +12,8 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '기술 면접 예상 질문',
-      items: ['interview'],
+      label: '면접 예상 질문',
+      items: ['interview', "system-integration"],
     },
   ],
 };

@@ -1,12 +1,12 @@
 module.exports = {
-  title: 'Tech Interview Wiki',
-  tagline: 'Tech Interview Wiki',
+  title: 'Tech Interview docs',
+  tagline: 'Tech Interview docs',
   url: 'http://localhost:3000/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/circle.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'Tech Interview Wiki', // Usually your repo name.
+  projectName: 'Tech Interview docs', // Usually your repo name.
   plugins: [
     "docusaurus-plugin-google-adsense",
   ],
@@ -15,7 +15,7 @@ module.exports = {
       dataAdClient: "ca-pub-9859374823916972",
     },
     navbar: {
-      title: 'Tech Interview Wiki with CoCo',
+      title: 'Tech Interview docs with CoCo',
       logo: {
         alt: 'My Site Logo',
         src: 'img/rect.ico',
@@ -24,7 +24,7 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Wiki',
           position: 'left',
         },
         {
