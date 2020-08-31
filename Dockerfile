@@ -14,7 +14,11 @@ RUN wc -c node_modules/@docusaurus/mdx-loader/src/remark/rightToc/search.js | gr
 RUN echo $(wc -c node_modules/@docusaurus/mdx-loader/src/index.js)
 
 RUN wc -c node_modules/@docusaurus/mdx-loader/src/index.js | grep 2214 -q && mv custom_node_modules/index.js node_modules/@docusaurus/mdx-loader/src/index.js || echo "\n\nUpdate custom_node_modules/index.js\n\n"
+RUN yarn build
 
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
+COPY --from=0 /app/my-website/build/ .
 
-CMD ["yarn", "start"]
-EXPOSE 3000 35729
+CMD ["nginx", "-g", "daemon off;"]
+
