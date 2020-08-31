@@ -7,13 +7,7 @@ module.exports = {
   favicon: 'img/circle.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'Tech Interview docs', // Usually your repo name.
-  plugins: [
-    "docusaurus-plugin-google-adsense",
-  ],
   themeConfig: {
-    googleAdsense: {
-      dataAdClient: "ca-pub-9859374823916972",
-    },
     navbar: {
       title: 'Tech Interview docs with CoCo',
       logo: {
