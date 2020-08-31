@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Tech Interview docs',
   tagline: 'Tech Interview docs',
-  url: 'http://localhost:3000/',
+  url: 'https://version2-interview-wiki-cafemug.endpoint.ainize.ai/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/circle.ico',
