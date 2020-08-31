@@ -57,7 +57,9 @@ const siteConfig = {
     primaryColor: '#656464',
     secondaryColor: '#470730',
   },
-
+  googleAdsense: {
+    dataAdClient: "ca-pub-9859374823916972",
+  },
   /* Custom fonts for website */
   /*
   fonts: {
