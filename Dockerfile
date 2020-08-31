@@ -1,10 +1,15 @@
 FROM node:lts
 
-WORKDIR /app/website
+WORKDIR /app/my-website
 
-EXPOSE 3000 35729
-COPY ./docs /app/docs
-COPY ./website /app/website
+
+COPY ./my-website /app/my-website
 RUN yarn install
+RUN yarn build
 
-CMD ["yarn", "start"]
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
+COPY --from=0 /app/my-website/build/ .
+
+CMD ["nginx", "-g", "daemon off;"]
+
