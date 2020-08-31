@@ -22,7 +22,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/Cafemug',
+          href: 'https://github.com/Cafemug/Interview_wiki',
           label: 'GitHub',
           position: 'right',
         },
